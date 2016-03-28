@@ -1,5 +1,41 @@
-# First chapter
-登陆地址：login
-参数：inputPhone
-      inputPassword
-      userType
+# First chapter  request：请求地址 parameter：参数  response：响应内容  returnResult(返回结果 status状态0失败，1成功、msg返回信息)
+登陆：
+      request：login
+      parameter： 
+            inputPhone-手机号
+            inputPassword-密码
+            userType-用户类型
+      response：
+            returnResult
+查询提现纪录(管理员)：
+      request：drawcashlist
+      parameter：keyword-搜索关键字
+      response：JSONList
+修改提现状态(管理员)：
+      request：updateStatus
+      parameter:
+            status-修改状态
+            id-提现记录id
+      response:returnResult
+查询广告主充值账户(管理员)：
+      request：rechargelist
+      parameter：userName-查询用户名
+      response：JSONList
+查询广告主充值记录(管理员):
+      request：rechargehistorylist
+      parameter：businessId-企业id
+      response：JSONList
+给广告主充值(管理员)：
+      request：recharge
+      parameter：
+            businessId-企业id
+            score-金额
+      response：returnResult
+查询账户历史纪录(媒体主)
+      request：account/history
+      parameter：type-类型(0：全部、1：提现记录、2：收入记录)
+      response：JSONList
+查询账户余额
+      request：getscore
+      parameter：businessId
+      response：JSONList
