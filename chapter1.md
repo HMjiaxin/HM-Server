@@ -8,34 +8,34 @@
       response：
             returnResult
 查询提现纪录(管理员)：
-      request：drawcashlist
+      request：cashmanage/drawcashlist
       parameter：keyword-搜索关键字
       response：JSONList
 修改提现状态(管理员)：
-      request：updateStatus
+      request：cashmanage/updateStatus
       parameter:
             status-修改状态
             id-提现记录id
       response:returnResult
 查询广告主充值账户(管理员)：
-      request：rechargelist
+      request：cashmanage/rechargelist
       parameter：userName-查询用户名
       response：JSONList
 查询广告主充值记录(管理员):
-      request：rechargehistorylist
+      request：cashmanage/rechargehistorylist
       parameter：businessId-企业id
       response：JSONList
 给广告主充值(管理员)：
-      request：recharge
+      request：cashmanage/recharge
       parameter：
             businessId-企业id
             score-金额
       response：returnResult
 查询账户历史纪录(媒体主)
-      request：account/history
+      request：cashmanage/account/history
       parameter：type-类型(0：全部、1：提现记录、2：收入记录)
       response：JSONList
 查询账户余额
-      request：getscore
+      request：cashmanage/getscore
       parameter：businessId
       response：JSONList
